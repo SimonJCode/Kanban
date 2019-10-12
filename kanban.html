@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <link href="styleKanban.css" rel="stylesheet">
+        <title>Kanban Meta</title>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="toDo" class="toDo" ondrop="drop(event)" ondragenter="dragEnter(event), ondragleave="dragLeave(event)" ondragover="allowDrop(event)">
+                <h3>todo</h3>
+                    <p>testa todo</p>
+
+            </div> <!--end of todo-div-->
+            <div id="doing" class="doing" ondrop="drop(event)" ondragenter="dragEnter(event), ondragleave="dragLeave(event)" ondragover="allowDrop(event)">
+                <h3>doing</h3>
+                    <p>testa doing</p>
+            </div><!--end of doing-->
+                    
+            <div id="testing" class="test" ondrop="drop(event)" ondragenter="dragEnter(event), ondragleave="dragLeave(event)" ondragover="allowDrop(event)">
+                <h3>testing</h3>
+                    <p>testa testing</p>
+            </div><!--end of test-->
+
+            <div id="done" class="done" ondrop="drop(event)" ondragenter="dragEnter(event), ondragleave="dragLeave(event)" ondragover="allowDrop(event)">
+                <h3>done</h3>
+                    <p>testa done</p>
+            </div><!--end of done-->
+        
+        </div> <!--end of wrapper--> 
+
+        <footer>
+            <button id="logout-btn">logga ut</button> <!--Kunna logga ut utan att rensa localstorage?-->
+        </footer>
+        <script src="scriptKanban.js"></script>
+    </body>
+</html>
