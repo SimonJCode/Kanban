@@ -1,0 +1,27 @@
+[
+    {
+        "userid": 0,
+        "usernamee": "simon",
+        "password": "1111"
+    },{
+        "userid": 1,
+        "usernamee": "aslan",
+        "password": "2222"
+    },{
+        "userid": 2,
+        "usernamee": "nemanja",
+        "password": "3333"
+    },{
+        "userid": 3,
+        "usernamee": "anton",
+        "password": "4444"
+    },{
+        "userid": 4,
+        "usernamee": "jonas",
+        "password": "5555"
+    },{
+        "userid": 5,
+        "usernamee": "janne",
+        "password": "6666"
+    }
+]
