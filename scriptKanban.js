@@ -79,6 +79,11 @@ function addCard() { //Ge varje bräda en funktion att lägga till nya kort
 
         localStorage.setItem("myDone", done_info);
     });
+}
 
-
+//----LOGOUT----//
+function logout(){
+    localStorage.setItem("loggedIn", false);
+    localStorage.setItem("userID", -1);
+    location.replace("index.html");
 }
