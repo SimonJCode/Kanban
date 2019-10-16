@@ -1,0 +1,155 @@
+body {
+    background: url("img/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-repeat: center;
+}
+
+#wrapper {
+    width: 100%;
+    height: 100vh;
+}
+
+.card {
+    float: left;
+    width: 20%;
+    max-width: 300px;
+    min-height: 300px;
+    padding: 5px 15px 50px 15px;
+    margin: 50px 10px;
+    box-shadow: 0 3px 1px -2px rgba(225, 225, 225, .9), 0 2px 2px 0 rgba(225, 225, 225, .84), 0 1px 5px 0 rgba(225, 225, 225, .82);
+    position: relative;
+    background: rgb(250, 250, 207);
+}
+
+h1 {
+    padding: 15px 0 15px 0;
+    font-family: monospace;
+    margin: -5px -15px 15px -15px;
+    text-indent: 15px;
+    color: #FFF;
+}
+
+.toDo>h1 {
+    background: rgb(238, 64, 11);
+}
+
+.doing>h1 {
+    background: #caec6c;
+}
+
+.test>h1 {
+    background: #5aa1ca;
+}
+
+.done>h1 {
+    background: #29c731;
+}
+
+p.card-p {
+    font-weight: normal;
+    padding: 10px;
+    border: none;
+    cursor: move;
+    display: block;
+    font-size: 16px;
+    margin: 5px auto !important;
+    border-radius: 2px;
+    color: #FFF;
+    opacity: 1;
+    will-change: traansform;
+    animation: fadeIn .3s linear;
+    transition: all 0.3s ease-in-out;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: 1px solid transparent;
+}
+
+p.card-p:hover {
+    background: #FFF;
+}
+
+p.card-p:active {
+    transform: scale(0.8);
+}
+
+.toDo p {
+    background: rgb(238, 64, 11);
+}
+
+.toDo p:hover {
+    border-color: rgb(238, 64, 11);
+    color: rgb(238, 64, 11);
+}
+
+.doing p {
+    background: #caec6c;
+}
+
+.doing p:hover {
+    border-color: #caec6c;
+    color: #caec6c;
+}
+
+.test p {
+    background: #5aa1ca;
+}
+
+.test p:hover {
+    border-color: #5aa1ca;
+    color: #5aa1ca;
+}
+
+.done p {
+    background: #29c731;
+}
+
+.done p:hover {
+    border-color: #29c731;
+    color: #29c731;
+}
+
+a.add-link {
+    cursor: pointer;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: rgb(117, 182, 235);
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    width: auto;
+    height: 30px;
+    text-decoration: none;
+    display: block;
+}
+
+a.add-link:hover {
+    color: rgb(56, 117, 196);
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 60px);
+    height: auto;
+    display: block;
+    padding: 30px;
+    text-align: right;
+}
+
+#logout-btn {
+    border: none;
+    background: #1a68c2;
+    color: #FFF;
+    border-radius: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 10px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    opacity: 0.7;
+}
+
+#logout-btn:hover {
+    opacity: 1;
+}
