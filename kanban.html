@@ -1,39 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width", initial-scale="1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie-edge">
-        <link href="styleKanban.css" rel="stylesheet">
-        <title>Kanban Meta</title>
-    </head>
-    <body>
-        <div id="wrapper">
-            <div id="toDo" class="toDo" ondrop="drop(event)" ondragenter="dragEnter(event), ondragleave="dragLeave(event)" ondragover="allowDrop(event)">
-                <h1>todo</h1>
-                    <p id="addTodo">Lägg till kort</p>
 
-            </div> <!--end of todo-div-->
-            <div id="doing" class="doing" ondrop="drop(event)" ondragenter="dragEnter(event), ondragleave="dragLeave(event)" ondragover="allowDrop(event)">
-                <h1>doing</h1>
-                    <p id="addDoing">Lägg till kort</p>
-            </div><!--end of doing-->
-                    
-            <div id="testing" class="test" ondrop="drop(event)" ondragenter="dragEnter(event), ondragleave="dragLeave(event)" ondragover="allowDrop(event)">
-                <h1>testing</h1>
-                    <p id="addTesting">Lägg till kort</p>
-            </div><!--end of test-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link href="styleKanban.css" rel="stylesheet">
+    <title>Kanban Meta</title>
+    <!-- css -->
+    <link href="styles.css" rel="stylesheet">
+</head>
 
-            <div id="done" class="done" ondrop="drop(event)" ondragenter="dragEnter(event), ondragleave="dragLeave(event)" ondragover="allowDrop(event)">
-                <h1>done</h1>
-                    <p id="addDone">Lägg till kort</p>
-            </div><!--end of done-->
-        
-        </div> <!--end of wrapper--> 
+<body>
+    <div id="wrapper">
+        <div class="card toDo" id="toDo">
+            <h1>Todo</h1>
+            <a href="#" class="add-link" id="addTodo">Lägg till kort</a>
+        </div>
+        <!--end of todo-div-->
+        <div class="card doing" id="doing">
+            <h1>Doing</h1>
+            <a href="#" class="add-link" id="addDoing">Lägg till kort</a>
+        </div>
+        <!--end of doing-->
 
-        <footer>
-            <button id="logout-btn" onclick="logout()">logga ut</button>
-        </footer>
-        <script src="scriptKanban.js"></script>
-    </body>
+        <div class="card test" id="testing">
+            <h1>Testing</h1>
+            <a href="#" class="add-link" id="addTesting">Lägg till kort</a>
+        </div>
+        <!--end of test-->
+
+        <div class="card done" id="done">
+            <h1>Done</h1>
+            <a href="#" class="add-link" id="addDone">Lägg till kort</a>
+        </div>
+        <!--end of done-->
+
+    </div>
+    <!--end of wrapper-->
+
+    <footer>
+        <button type="button" id="logout-btn" onclick="logout()">logga ut</button>
+    </footer>
+    <script src="scriptKanban.js"></script>
+    <script src="scriptDragDrop.js"></script>
+</body>
+
 </html>
