@@ -1,3 +1,4 @@
+window.onload = controlLogin(); //Check if user is logged in.
 window.onload = addCard(); //Kör funktion som gör att användaren kan lägga till kort
 window.onload = printCard(); //Skriv ut redan tillagda kort
 
@@ -178,6 +179,18 @@ function addCard() { //Ge varje bräda en funktion att lägga till nya kort
             runDraggable();
         }
     });
+}
+
+//----Control Login----//
+//If the user is not logged in, send them to index.html.
+function controlLogin(){
+    let login = localStorage.getItem("loggedIn");
+        if (login === "false"){
+            location.replace("index.html");
+        }
+        else{
+            console.log("logged in");
+        }
 }
 
 //----LOGOUT----//
