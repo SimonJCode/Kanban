@@ -1,3 +1,4 @@
+window.onload = controlLogin(); //Check if logged in.
 
 //Gets called when the login button is clicked.
 function loginBtnClick(){
@@ -32,4 +33,16 @@ function loginBtnClick(){
         alert("Wrong username and/or password");
     }
 })
+}
+
+//----Control Login----//
+//If the user is already logged in, send them to kanban.html.
+function controlLogin(){
+    let login = localStorage.getItem("loggedIn");
+        if (login === "true"){
+            location.replace("kanban.html");
+        }
+        else{
+            console.log("not logged in");
+        }
 }
