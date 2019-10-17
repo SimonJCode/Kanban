@@ -6,12 +6,24 @@
     <meta name="viewport" content="width=device-width" , initial-scale="1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
     <link href="styles/styleKanban.css" rel="stylesheet">
+    <link href="styles/stylesKanbaExtra.css" rel="stylesheet">
     <title>Kanban Meta</title>
 </head>
 
 <body>
+    <header>
+        <div class="users-info">
+            <p id="char"></p>
+            <p id="name"></p>
+        </div>
+        <button type="button" id="logout-btn" onclick="logout()">Logga ut</button>
+        <div class="count-div">
+            <p>Klara: <span id="done_count">0</span></p>
+            <p>Åtestående: <span id="left_count">0</span></p>
+        </div>
+    </header>
     <div id="wrapper">
-        <div class="card toDo" id="toDo">
+        <div class="card toDo" id="todo">
             <h1>Todo</h1>
             <a href="#" class="add-link" id="addTodo">Lägg till kort</a>
         </div>
@@ -37,9 +49,6 @@
     </div>
     <!--end of wrapper-->
 
-    <footer>
-        <button type="button" id="logout-btn" onclick="logout()">Logga ut</button>
-    </footer>
     <script src="scriptKanban.js"></script>
     <script src="scriptDragDrop.js"></script>
 </body>

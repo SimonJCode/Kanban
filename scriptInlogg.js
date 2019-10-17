@@ -1,5 +1,8 @@
 window.onload = controlLogin();
 
+if (localStorage.getItem("loggedIn") === "true")
+    location.replace("kanban.html");
+
 //Gets called when the login button is clicked.
 function loginBtnClick() {
 
@@ -28,6 +31,7 @@ function loginBtnClick() {
             else if (users[userIndex].password === password) {
                 localStorage.setItem("loggedIn", true);
                 localStorage.setItem("userID", userIndex);
+                localStorage.setItem("username", username); // Save user name
                 location.replace("kanban.html");
             }
             //If the user did exist but the password was wrong.
@@ -39,12 +43,11 @@ function loginBtnClick() {
 
 //----Control Login----//
 //If the user is already logged in, send them to kanban.html.
-function controlLogin(){
+function controlLogin() {
     let login = localStorage.getItem("loggedIn");
-        if (login === "true"){
-            location.replace("kanban.html");
-        }
-        else{
-            console.log("not logged in");
-        }
+    if (login === "true") {
+        location.replace("kanban.html");
+    } else {
+        console.log("not logged in");
+    }
 }

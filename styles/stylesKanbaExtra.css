@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: o;
+}
+
+header {
+    height: 100px;
+    width: 100%;
+    position: relative;
+    background: rgba(255, 255, 255, 0.753);
+}
+
+.users-info {
+    height: 100%;
+    width: 100%;
+    display: block;
+    float: left;
+}
+
+.users-info p {
+    float: left;
+}
+
+#char {
+    width: 80px;
+    height: 80px;
+    background: #372727;
+    color: #FFF;
+    border-radius: 50%;
+    margin: 10px 20px 0 50px;
+    line-height: 70px;
+    font-family: cursive;
+    font-size: 60px;
+    text-align: center;
+    border: spx solid #FFF;
+}
+
+#name {
+    height: 80px;
+    margin-top: 10px;
+    font-size: 40px;
+    text-transform: capitalize;
+    color: #372727;
+    font-family: cursive;
+    line-height: 75px;
+    background: none;
+}
+
+.count-div {
+    width: auto;
+    display: block;
+    position: absolute;
+    top: 7px;
+    right: 150px;
+}
+
+.count-div p {
+    width: auto;
+    float: right;
+    font-size: 25px;
+    font-family: "Bauhaus 93";
+    margin-right: 50px;
+    color: rgb(58, 58, 58);
+    background: none;
+}
+
+.count-div p:first-child>span {
+    color: #29c731;
+    margin-left: 15px;
+}
+
+.count-div p:last-child>span {
+    color: #cc0000;
+    margin-left: 15px;
+}
+
+#logout-btn {
+    border: none;
+    background: #161918;
+    color: #FFF;
+    /* border-radius: 3px; */
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    opacity: 0.7;
+    position: absolute;
+    top: 30px;
+    right: 50px;
+}
+
+#logout-btn:hover {
+    opacity: 1;
+}
