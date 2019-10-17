@@ -1,0 +1,118 @@
+body {
+    background: url("../img/bakgrundKanban.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-repeat: center; 
+    font-family: sans-serif;
+}
+
+#wrapper {
+    width: 100%;
+    height: 100vh;
+}
+
+.card {
+    float: left;
+    width: 20%;
+    max-width: 250px;
+    min-height: 250px;
+    padding: 5px 15px 50px 15px;
+    margin: 50px 10px;
+    box-shadow: 0 3px 1px -2px rgba(225, 225, 225, .9), 0 2px 2px 0 rgba(225, 225, 225, .84), 0 1px 5px 0 rgba(225, 225, 225, .82); 
+    position: relative;
+    background:  rgba(0, 0, 0, 0.5);
+    opacity: 0.9
+}
+
+h1 {
+    padding: 15px 0 15px 0;
+    font-family: monospace;
+    margin: -5px -15px 15px -15px;
+    text-indent: 15px;
+    color: #FFF;
+}
+
+h1 {
+    background: grey;
+}
+
+p.card-p {
+    font-weight: normal;
+    padding: 10px;
+    border: none;
+    cursor: move;
+    display: block;
+    font-size: 16px;
+    margin: 5px auto !important;
+    border-radius: 2px;
+    color: #FFF; 
+    opacity: 1;
+    will-change: traansform;
+    animation: fadeIn .3s linear;
+    transition: all 0.3s ease-in-out;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: 1px solid transparent;
+}
+
+p.card-p:hover {
+    background: white;
+}
+
+p.card-p:active {
+    transform: scale(0.8);
+} 
+
+p {
+    background: grey;
+}
+
+p:hover {
+    border-color: grey;
+    color: grey;
+}
+
+a.add-link {
+    cursor: pointer;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    width: auto;
+    height: 30px;
+    text-decoration: none;
+    display: block;
+}
+
+a.add-link:hover {
+    color: grey;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 60px);
+    height: auto;
+    display: block;
+    padding: 30px;
+    text-align: right;
+}
+
+#logout-btn {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: grey;
+    color:whitesmoke;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+#logout-btn:hover {
+    cursor: pointer;
+    background:grey;
+    color: whitesmoke;
+    opacity: 0.5;
+}
