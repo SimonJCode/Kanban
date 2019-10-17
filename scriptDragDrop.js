@@ -4,6 +4,18 @@ setTimeout(function() {
     runDraggable();
 }, 500)
 
+var elements = document.querySelectorAll("*[id]");
+var pIds = {};
+
+for (let i = 0; i < elements.length; i++) {
+    const id = elements[i].getAttribute("id");
+    if (pIds[id]) {
+        elements[i].parentNode.removeChild(elements[i]);
+    } else {
+        pIds[id] = true;
+    }
+}
+
 function runDraggable() {
 
     const cards = document.querySelectorAll(".card");
@@ -49,7 +61,7 @@ function runDraggable() {
                     id = e.path[0].id
                 else
                     id = e.explicitOriginalTarget.id;
-                setRemoveObject(id);
+                setRemoveObject(id, dragged);
                 this.append(dragged);
                 e.preventDefault();
             })
@@ -59,15 +71,13 @@ function runDraggable() {
 
 
 // Remove from array or push to array
-var variable = "";
-
-function setRemoveObject(id) {
+function setRemoveObject(id, param) {
     let loc = localStorage;
 
-    let current = dragged.attributes.name.value;
+    let current = param.attributes.name.value;
     let list_name = "my" + id.slice(0, 1).toUpperCase() + id.slice(1);
 
-    let identity = dragged.attributes.id.value;
+    let identity = param.attributes.id.value;
     let str = document.getElementById(identity).innerHTML;
 
 
@@ -81,15 +91,14 @@ function setRemoveObject(id) {
     if (list != null && list.length > 0)
         loc.setItem(current, JSON.stringify(list));
 
-    let obj = null;
-    if (variable !== dragged)
-        obj = getObject(str, list_name, identity); // getObject() function from scriptKanban.js
-
+    let obj = getObject(str, list_name, identity); // getObject() function from scriptKanban.js
     list = JSON.parse(loc.getItem(list_name)) || [];
+    if (list != null && list.lengt > 0)
+        loc.removeItem(list_name);
+
     if (obj != null)
         list.push(obj);
 
-    loc.removeItem(list_name);
     loc.setItem(list_name, JSON.stringify(list))
 
     todo_info = JSON.parse(loc.getItem("myTodo"));
@@ -97,7 +106,8 @@ function setRemoveObject(id) {
     testing_info = JSON.parse(loc.getItem("myTesting"));
     done_info = JSON.parse(loc.getItem("myDone"));
 
-    variable = dragged;
+    param.attributes.name.value = list_name;
+    getSetCount();
 }
 
 // Get array name
@@ -105,7 +115,6 @@ function getArrayName(str) {
     let name = "my" + str.slice(0, 1).toUpperCase() + str.slice(1).toLowerCase();
     return name;
 }
-
 
 // Get and set count
 function getSetCount() {
@@ -120,5 +129,3 @@ function getSetCount() {
     left_count.innerHTML = todo.filter(x => x.id == userId).length + doing.filter(x => x.id == userId).length + testing.filter(x => x.id == userId).length;
     done_count.innerHTML = done.filter(x => x.id == userId).length;
 }
-
-// loc.clear()
